@@ -41,12 +41,8 @@ li {
 li:hover {
   transform: scale(1.1);
 }
-.container {
-	height: 100%;
-	display: block;
-}
 .content {
-	width: 500px;
+	width: 100%;
 	margin: 30px auto;
 }
 .content a {
@@ -54,7 +50,7 @@ li:hover {
 	margin: 5px 0;
 	transition: all 0.2s;
 	font-size: 1.2em;
-	display: block;
+	display: flex;
 	height: 80px;
 }
 .content a:hover {
@@ -70,28 +66,27 @@ h1 .secondary {
 	font-size: .6em;
   color: rgba(255,255,255,.6);
   letter-spacing: 0;
+	margin: .3em auto;
 }
-.tech {
-	float: right;
-	margin-right: 20px;
+.description {
+	width: 100%;
+  font-size: .9em;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.detail {
+	display: flex;
+	flex-direction: column;
 }
 img {
-	float: left;
 	height: 80px;
-}
-p {
-	margin: 0 10px 0 100px;
-	padding: 20px 0 30px 0;
-	line-height: 2em;
 }
 .mobile--type {
 	color: #999;
   font-size: .8em;
-  float: right;
-  position: relative;
-  top: -18px;
-  margin-right: 20px;
-  clear: right;
+	position: relative;
 }
 .button-more {
 	width: 100%;
@@ -114,118 +109,180 @@ p {
 .show {
 	display: block;
 }
-@media screen and (max-width: 768px) {
-	.content {
-  		width: 100%;
-  	}
-}
-@media screen and (max-width: 500px) {
-	.content p {
-		margin: 0 0 0 90px;
-		padding: 10px;
-		line-height: 1.5em;
+
+@media screen and (min-width: 460px) {
+	.description {
+		font-size: 1em;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.detail {
+	  text-align: right;
 	}
 	.tech {
 		display: block;
-		float: none;
-	}
-}
-@media screen and (max-width: 460px) {
-	.content p {
-		font-size: .9em;
-		line-height: 1.2em;
 	}
 	.mobile--type {
-		float: left;
-		top: -2px;
+		top: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.content {
+		width: 500px;
 	}
 }
 </style>
 
 </head>
 <body>
-<div class="container">
-	<div class="content">
-		<h1>David Ra Youssef<div class="secondary"> Front End Developer with an eye for design</div></h1>
-		<ul>
+
+<main class="content">
+
+	<h1>David Ra Youssef<div class="secondary"> Front End Developer with an eye for design</div></h1>
+
+	<ul>
+		<li>
+			<a href="react-quiz/" target="_blank">
+				<img src="images/react-quiz-thumb.jpg">
+				<div class="description">
+					<span class="title">JavaScript Quiz</span>
+					<div class="detail">
+						<span class="tech secondary">React</span>
+						<span class="mobile--type">responsive</span>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="front-end-dev-links/" target="_blank">
+				<img src="images/front-end-dev-links-thumb.jpg">
+				<div class="description">
+					<span class="title">Front-End Dev Links</span>
+					<div class="detail">
+						<span class="tech secondary">React</span>
+						<span class="mobile--type">responsive</span>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="ng2-document-cms-ui/" target="_blank">
+				<img src="images/ng2-document-cms-ui-thumb.jpg">
+				<div class="description">
+					<span class="title">Document CMS UI 2</span>
+					<div class="detail">
+						<span class="tech secondary">Angular 2</span>
+						<span class="mobile--type">responsive</span>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="react-redux-request-tracker/" target="_blank">
+				<img src="images/react-request-tracker-thumb.jpg">
+				<div class="description">
+					<span class="title">Issue Tracker UI</span>
+					<div class="detail">
+						<span class="tech secondary">React/Redux</span>
+						<span class="mobile--type">responsive</span>
+					</div>
+				</div>
+			</a>
+		</li>
+    <li>
+      <a href="ng2-biz-cards/" target="_blank">
+        <img src="images/ng2-biz-card-printer-thumb.jpg">
+        <div class="description">
+					<span class="title">Business Card Printer</span>
+					<div class="detail">
+						<span class="tech secondary">Angular 2</span>
+					</div>
+				</div>
+      </a>
+    </li>
+		<li>
+			<a href="standard-scroller/index.html" target="_blank">
+				<img src="images/standard-scroller-thumb.jpg">
+				<div class="description">
+					<span class="title">Standard Scroller</span>
+					<div class="detail">
+						<span class="tech secondary">Bootstrap</span>
+						<span class="mobile--type">responsive</span>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
+				<a href="full-screen-gif-slider/" target="_blank">
+					<img src="images/gif-slider-thumb.gif">
+					<div class="description">
+					<span class="title">Full Screen Gif Slider</span>
+					<div class="detail">
+						<span class="tech secondary">JavaScript</span>
+						<span class="mobile--type">fluid</span>
+					</div>
+				</div>
+				</a>
+			</li>
+
+		<div class="more">
+
 			<li>
-				<a href="react-quiz/" target="_blank">
-					<img src="images/react-quiz-thumb.jpg">
-					<p>JavaScript Quiz <span class="tech secondary">React</span><span class="mobile--type">responsive</span></p>
+				<a href="document-cms-ui-ember/index.htm#/workflow" target="_blank">
+					<img src="images/document-cms-ui-ember-thumb.jpg">
+					<div class="description">
+						<span class="title">Document CMS UI</span>
+						<div class="detail">
+							<span class="tech secondary">EmberJS</span>
+						</div>
+					</div>
 				</a>
 			</li>
 			<li>
-				<a href="front-end-dev-links/" target="_blank">
-					<img src="images/front-end-dev-links-thumb.jpg">
-					<p>Front-End Dev Links <span class="tech secondary">React</span><span class="mobile--type">responsive</span></p>
+				<a href="full-page-scroller/index.html" target="_blank">
+					<img src="images/full-page-scroller-thumb.jpg">
+					<div class="description">
+						<span class="title">Full Page Scroller</span>
+						<div class="detail">
+							<span class="tech secondary">jQuery</span>
+						</div>
+					</div>
 				</a>
 			</li>
 			<li>
-				<a href="ng2-document-cms-ui/" target="_blank">
-					<img src="images/ng2-document-cms-ui-thumb.jpg">
-					<p>Document CMS UI 2 <span class="tech secondary">Angular 2</span><span class="mobile--type">responsive</span></p>
+				<a href="http://toptumbles.tumblr.com" target="_blank">
+					<img src="images/blog-sample-2-thumb.jpg">
+					<div class="description">
+						<span class="title">Gif Blog</span>
+						<div class="detail">
+							<span class="tech secondary">AfterEffects/Photoshop</span>
+							<span class="mobile--type">mobile-dynamic</span>
+						</div>
+					</div>
 				</a>
 			</li>
 			<li>
-				<a href="react-redux-request-tracker/" target="_blank">
-					<img src="images/react-request-tracker-thumb.jpg">
-					<p>Issue Tracker UI <span class="tech secondary">React/Redux</span><span class="mobile--type">responsive</span></p>
+				<a href="graphic-design/design.html" target="_blank">
+					<img src="images/print-design-thumb.jpg">
+					<div class="description">
+						<span class="title">Print Design</span>
+						<div class="detail">
+							<span class="tech secondary">Adobe CS</span>
+							<span class="mobile--type">responsive</span>
+						</div>
+					</div>
 				</a>
 			</li>
-      <li>
-        <a href="ng2-biz-cards/" target="_blank">
-          <img src="images/ng2-biz-card-printer-thumb.jpg">
-          <p>Business Card Printer <span class="tech secondary">Angular 2</span></p>
-        </a>
-      </li>
-			<li>
-				<a href="standard-scroller/index.html" target="_blank">
-					<img src="images/standard-scroller-thumb.jpg">
-					<p>Standard Scroller <span class="tech secondary">Bootstrap</span><span class="mobile--type">responsive</span></p>
-				</a>
-			</li>
-			<li>
- 				<a href="full-screen-gif-slider/" target="_blank">
- 					<img src="images/gif-slider-thumb.gif">
- 					<p>Full Screen Gif Slider <span class="tech secondary">JavaScript</span><span class="mobile--type">fluid</span></p>
- 				</a>
- 			</li>
 
-			<div class="more">
+		</div>
 
-				<li>
-					<a href="document-cms-ui-ember/index.htm#/workflow" target="_blank">
-						<img src="images/document-cms-ui-ember-thumb.jpg">
-						<p>Document CMS UI<span class="tech secondary">EmberJS</span></p>
-					</a>
-				</li>
-				<li>
-					<a href="full-page-scroller/index.html" target="_blank">
-						<img src="images/full-page-scroller-thumb.jpg">
-						<p>Full Page Scroller <span class="tech secondary">jQuery</span></p>
-					</a>
-				</li>
-				<li>
-					<a href="http://toptumbles.tumblr.com" target="_blank">
-						<img src="images/blog-sample-2-thumb.jpg">
-						<p>Gif Blog<span class="tech secondary">AfterEffects/Photoshop</span><span class="mobile--type">mobile-dynamic</span></p>
-					</a>
-				</li>
-				<li>
-					<a href="graphic-design/design.html" target="_blank">
-						<img src="images/print-design-thumb.jpg">
-						<p>Print Design <span class="tech secondary">Adobe CS</span><span class="mobile--type">responsive</span></p>
-					</a>
-				</li>
+	</ul>
 
-			</div>
+	<button class="button-more" type="button">View More</button>
 
-		</ul>
-
-		<button class="button-more" type="button">View More</button>
-
-	</div>
-</div>
+</main>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
