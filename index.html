@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
 <title>David Ra Youssef Portfolio</title>
 
@@ -10,84 +11,103 @@
 
 <style>
 html {
-	height:100%;
+	height: 100vh;
+	overflow-y: scroll;
 }
+
 body {
 	background: rgba(0,0,0,.85);
 	color: #EEE;
 	font: 400 16px "Roboto", Helvetica, Arial, sans-serif;
-	height: 100%;
 }
+
 h1 {
-	font: 100 2.5em "Roboto";
-	padding-bottom: 5px;
-	margin-bottom: 0;
+	font-weight: 100;
+	font-size: 2.5em;
+	padding: 0;
+	margin: 0;
 	letter-spacing: -1px;
 }
+
+h2 {
+	color: rgba(255, 255, 255, .6);
+  margin: .2em auto .2em;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
 ul {
 	margin-top: 0;
 }
+
 a, a:visited {
 	color: #DDD;
 	text-decoration: none;
 }
+
 ul {
 	list-style-type: none;
 	padding: 0;
 }
+
 li {
   transition: all 0.2s ease;
 }
+
 li:hover {
   transform: scale(1.1);
 }
-.content {
-	width: 100%;
-	margin: 30px auto;
+
+header, .content {
+  max-width: 500px;
+  margin: 30px auto;
 }
+
 .content a {
-	background: rgba(255,255,255,.1);
+	background: rgba(255, 255, 255, .1);
 	margin: 5px 0;
 	transition: all 0.2s;
 	font-size: 1.2em;
 	display: flex;
 	height: 80px;
 }
+
 .content a:hover {
-	background: rgba(255,255,255,.15);
+	background: rgba(255, 255, 255, .15);
 }
+
 .content a:focus {
 	outline: none;
 }
+
 .secondary {
 	color: #4387fd;
 }
-h1 .secondary {
-	font-size: .6em;
-  color: rgba(255,255,255,.6);
-  letter-spacing: 0;
-	margin: .3em auto;
-}
+
 .description {
-	width: 100%;
+	width: 100vw;
   font-size: .9em;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .detail {
 	display: flex;
 	flex-direction: column;
 }
+
 img {
 	height: 80px;
 }
+
 .mobile--type {
 	color: #999;
   font-size: .8em;
 	position: relative;
 }
+
 .button-more {
 	width: 100%;
   padding: 20px;
@@ -95,17 +115,20 @@ img {
   background: none;
   color: #BBB;
   cursor: pointer;
-  font: 400 1.2em "Roboto";
+  font-size: 1.2em;
 	transition: background .2s, color .2s;
 }
+
 .button-more:hover {
 	background: rgba(255, 255, 255, .05);
 	color: #CCC;
 }
+
 .more {
 	display: none;
 	pointer-events: none;
 }
+
 .show {
 	display: block;
 }
@@ -117,35 +140,53 @@ img {
 		align-items: center;
 		justify-content: space-between;
 	}
+
 	.detail {
 	  text-align: right;
 	}
+
 	.tech {
 		display: block;
 	}
+
 	.mobile--type {
 		top: 0;
 	}
 }
 
-@media screen and (min-width: 768px) {
-	.content {
-		width: 500px;
-	}
-}
 </style>
 
 </head>
+
 <body>
+
+<header>
+
+	<div class="info-container">
+		<h1>David Ra Youssef</h1>
+		<h2>Front End Developer with an eye for design</h2>
+	</div>
+
+</header>
 
 <main class="content">
 
-	<h1>David Ra Youssef<div class="secondary"> Front End Developer with an eye for design</div></h1>
-
 	<ul>
 		<li>
+			<a href="vue-quiz/" target="_blank">
+				<img src="images/vue-quiz-thumb.jpg" alt="Vue Quiz Thumbnail">
+				<div class="description">
+					<span class="title">CSS Quiz</span>
+					<div class="detail">
+						<span class="tech secondary">Vue</span>
+						<span class="mobile--type">responsive</span>
+					</div>
+				</div>
+			</a>
+		</li>
+		<li>
 			<a href="react-quiz/" target="_blank">
-				<img src="images/react-quiz-thumb.jpg">
+				<img src="images/react-quiz-thumb.jpg" alt="React Quiz Thumbnail">
 				<div class="description">
 					<span class="title">JavaScript Quiz</span>
 					<div class="detail">
@@ -156,20 +197,8 @@ img {
 			</a>
 		</li>
 		<li>
-			<a href="front-end-dev-links/" target="_blank">
-				<img src="images/front-end-dev-links-thumb.jpg">
-				<div class="description">
-					<span class="title">Front-End Dev Links</span>
-					<div class="detail">
-						<span class="tech secondary">React</span>
-						<span class="mobile--type">responsive</span>
-					</div>
-				</div>
-			</a>
-		</li>
-		<li>
 			<a href="ng2-document-cms-ui/" target="_blank">
-				<img src="images/ng2-document-cms-ui-thumb.jpg">
+				<img src="images/ng2-document-cms-ui-thumb.jpg" alt="Angular 2 Document CMS UI 2 Thumbnail">
 				<div class="description">
 					<span class="title">Document CMS UI 2</span>
 					<div class="detail">
@@ -181,7 +210,7 @@ img {
 		</li>
 		<li>
 			<a href="react-redux-request-tracker/" target="_blank">
-				<img src="images/react-request-tracker-thumb.jpg">
+				<img src="images/react-request-tracker-thumb.jpg"  alt="React Request Tracker Thumbnail">
 				<div class="description">
 					<span class="title">Issue Tracker UI</span>
 					<div class="detail">
@@ -193,7 +222,7 @@ img {
 		</li>
     <li>
       <a href="ng2-biz-cards/" target="_blank">
-        <img src="images/ng2-biz-card-printer-thumb.jpg">
+        <img src="images/ng2-biz-card-printer-thumb.jpg" alt="Angular 2 Business Card Printer Thumbnail">
         <div class="description">
 					<span class="title">Business Card Printer</span>
 					<div class="detail">
@@ -202,9 +231,21 @@ img {
 				</div>
       </a>
     </li>
+		<!-- <li>
+			<a href="front-end-dev-links/" target="_blank">
+				<img src="images/front-end-dev-links-thumb.jpg" alt="Front-End Dev Links Thumbnail">
+				<div class="description">
+					<span class="title">Front-End Dev Links</span>
+					<div class="detail">
+						<span class="tech secondary">React</span>
+						<span class="mobile--type">responsive</span>
+					</div>
+				</div>
+			</a>
+		</li> -->
 		<li>
 			<a href="standard-scroller/index.html" target="_blank">
-				<img src="images/standard-scroller-thumb.jpg">
+				<img src="images/standard-scroller-thumb.jpg" alt="Standard Scroller Thumbnail">
 				<div class="description">
 					<span class="title">Standard Scroller</span>
 					<div class="detail">
@@ -216,7 +257,7 @@ img {
 		</li>
 		<li>
 				<a href="full-screen-gif-slider/" target="_blank">
-					<img src="images/gif-slider-thumb.gif">
+					<img src="images/gif-slider-thumb.gif" alt="Gif Slider Thumbnail">
 					<div class="description">
 					<span class="title">Full Screen Gif Slider</span>
 					<div class="detail">
@@ -231,7 +272,7 @@ img {
 
 			<li>
 				<a href="document-cms-ui-ember/index.htm#/workflow" target="_blank">
-					<img src="images/document-cms-ui-ember-thumb.jpg">
+					<img src="images/document-cms-ui-ember-thumb.jpg" alt="Ember Document CMS UI Thumbnail">
 					<div class="description">
 						<span class="title">Document CMS UI</span>
 						<div class="detail">
@@ -242,7 +283,7 @@ img {
 			</li>
 			<li>
 				<a href="full-page-scroller/index.html" target="_blank">
-					<img src="images/full-page-scroller-thumb.jpg">
+					<img src="images/full-page-scroller-thumb.jpg" alt="Full Page Scroller Thumbnail">
 					<div class="description">
 						<span class="title">Full Page Scroller</span>
 						<div class="detail">
@@ -253,7 +294,7 @@ img {
 			</li>
 			<li>
 				<a href="http://toptumbles.tumblr.com" target="_blank">
-					<img src="images/blog-sample-2-thumb.jpg">
+					<img src="images/blog-sample-2-thumb.jpg" alt="Tumblr Blog Thumbnail">
 					<div class="description">
 						<span class="title">Gif Blog</span>
 						<div class="detail">
@@ -265,7 +306,7 @@ img {
 			</li>
 			<li>
 				<a href="graphic-design/design.html" target="_blank">
-					<img src="images/print-design-thumb.jpg">
+					<img src="images/print-design-thumb.jpg" alt="Print Design Thumbnail">
 					<div class="description">
 						<span class="title">Print Design</span>
 						<div class="detail">
@@ -288,14 +329,17 @@ img {
 
 <script>
 	var more = document.querySelector('.more');
+
 	document.querySelector('.button-more').addEventListener('click', function(e) {
 		e.preventDefault();
+
 		this.style.display = 'none';
 		more.classList.add('show');
+
 		setTimeout(function() {
 			more.style.pointerEvents = 'auto';
 		}, 500);
-	})
+	});
 </script>
 
 </body>
